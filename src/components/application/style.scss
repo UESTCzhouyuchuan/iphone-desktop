@@ -1,0 +1,39 @@
+
+.application{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: all .5s;
+  .minus{
+    position: absolute;
+    font-size: 1.2rem;
+    top: -0.2rem;
+    left: -0.2rem;
+    color: rgb(200,200,200);
+  }
+  &-icon{
+    border-radius: 5px;
+    margin: 0 0 0.5rem 0;
+    font-size: 3rem;
+  }
+  &-title{
+    color: white;
+    text-align: center;
+    font-size: 1rem;
+    text-overflow: ellipsis;
+  }
+  &.shake-animation{
+    animation: shake .1s linear 0s infinite alternate none;
+  }
+}
+
+@keyframes shake {
+  from{
+    transform: rotate(-2deg);
+  }
+  to{
+    transform: rotate(2deg);
+  }
+}
